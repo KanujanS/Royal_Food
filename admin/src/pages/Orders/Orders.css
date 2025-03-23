@@ -1,0 +1,102 @@
+.order-item{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: #505050;
+}
+.order-item .order1{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    height: 100%; 
+}
+.order-item-food, .order-item-name{
+    font-weight: 600;
+}
+.order-item-name{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.order-item-address{
+    margin-bottom: 10px;
+}
+.order-item select{
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    border-radius: 10px;
+    width: max(10vw,100px);
+    padding: 10px;
+    outline: none;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+}
+@media (max-width: 1000px) {
+    .order-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        gap: 15px;
+        padding: 15px;
+        font-size: 12px;
+        text-align: start;
+    }
+
+    .order-item img {
+        width: 80px;
+        height: auto;
+        justify-self: center;
+    }
+
+    .order-item div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .order-item select {
+        width: 100%;
+        grid-column: span 2;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .order-item {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .order-item img {
+        width: 70px;
+        height: auto;
+        align-self: center;
+    }
+
+    .order-item div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .order-item .order-item-price,
+    .order-item .order-item-quantity {
+        width: 100%;
+    }
+    .order-item select {
+        width: 100%;
+        align-self: center;
+        margin-top: 10px;
+    }
+}
