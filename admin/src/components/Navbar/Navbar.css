@@ -1,13 +1,46 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 4%;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: relative;
 }
-.navbar .logo{
-    width: max(10%,80px);
+
+.logo {
+  height: 40px;
 }
-.navbar .profile{
-    width: 40px;
-    border-radius: 50%;
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout-button {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e04344;
 }
