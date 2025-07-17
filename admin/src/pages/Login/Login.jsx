@@ -33,14 +33,14 @@ const Login = ({ onLogin }) => {
         <h2>Admin Login</h2>
         <input
           type="email"
-          placeholder="Admin Email"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Admin Password"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
