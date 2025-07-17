@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -13,16 +13,32 @@ const App = () => {
   const url = "http://localhost:4000";
   const [adminEmail, setAdminEmail] = useState(null);
 
+  useEffect(()=>{
+    const storedEmail = localStorage.getItem('adminEmail') ;
+    if (storedEmail) {
+      setAdminEmail(storedEmail);
+    }
+  },[]);
+
+  const handleLogin = (email) => {
+    localStorage.setItem('adminEmail', email);
+    setAdminEmail(email);
+  };
+
+  const handleLogout = ()=> {
+    localStorage.removeItem('adminEmail');
+    setAdminEmail(null);
+  };
+
   return (
     <div>
-      {/* ✅ Always render ToastContainer */}
       <ToastContainer position="top-right" autoClose={3000} />
       
       {!adminEmail ? (
-        <Login onLogin={(email) => setAdminEmail(email)} />
+        <Login onLogin={handleLogin} />
       ) : (
         <>
-          <Navbar onLogout={() => setAdminEmail(null)} />
+          <Navbar onLogout={handleLogout} />
           <hr />
           <div className="app-content">
             <Sidebar />
