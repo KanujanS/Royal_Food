@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
 
 const Fooditems = ({ id, name, price, description, image }) => {
-  const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
+  const { cartItems = {}, addToCart, removeFromCart, url } = useContext(StoreContext);
   const imageUrl = image?.startsWith("http") ? image : `${url}/images/${image}`;
 
   return (
