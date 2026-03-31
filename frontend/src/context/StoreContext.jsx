@@ -15,7 +15,7 @@ export const StoreContext = createContext({
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://localhost:4000";
+  const url = "https://royal-food-backend.vercel.app";
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [food_list, setFoodlist] = useState([]);
 
