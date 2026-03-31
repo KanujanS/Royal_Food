@@ -43,9 +43,10 @@ const List = ({url}) => {
                 <b>Action</b>
             </div>
             {List.map((item,index)=>{
+                const imageUrl = item.image?.startsWith("http") ? item.image : `${url}/images/${item.image}`;
                 return(
                     <div key={index} className='list-table-format'>
-                        <img src={`${url}/images/`+item.image} alt="" />
+                        <img src={imageUrl} alt="" />
                         <p>{item.name}</p>
                         <p>{item.category}</p>
                         <p>${item.price}</p>
