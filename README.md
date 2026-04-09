@@ -125,31 +125,6 @@ The admin dashboard runs on `http://localhost:5173`.
 - The checkout flow in `backend/controllers/orderController.js` redirects back to `http://localhost:5174` for payment verification.
 - If you change local ports or deploy the apps separately, update those URLs accordingly.
 
-## Available Scripts
-
-### Frontend
-
-~~~bash
-npm run dev
-npm run build
-npm run lint
-npm run preview
-~~~
-
-### Admin
-
-~~~bash
-npm run dev
-npm run build
-npm run lint
-npm run preview
-~~~
-
-### Backend
-
-~~~bash
-npm run server
-~~~
 
 ## API Endpoints
 
@@ -173,6 +148,3 @@ npm run server
 - Orders include a fixed delivery fee in the current implementation.
 - Authentication is token-based and stored in local storage on the client.
 
-## License
-
-No license has been specified for this project.
